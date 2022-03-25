@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Meshing TUI and workflow example &#8212; PyFluent</title>
+    <title>update &#8212; PyFluent</title>
     
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
@@ -47,11 +47,11 @@
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Meshing (TUI)" href="tui.html" />
-    <link rel="prev" title="Meshing" href="index.html" />
+    <link rel="next" title="parent" href="ansys.fluent.post.pyvista.pyvista_objects.Mesh.parent.html" />
+    <link rel="prev" title="display" href="ansys.fluent.post.pyvista.pyvista_objects.Mesh.display.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -99,7 +99,7 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../getting_started/index.html">
-  Introduction
+  Getting Started
  </a>
 </li>
 
@@ -168,9 +168,10 @@
     
 
           <li class="nav-item nav-item-1"><a href="../../index.html" >API Reference</a> » </li>
-          <li class="nav-item nav-item-2"><a href="../index.html" >Core</a> » </li>
-          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">Meshing</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">Meshing TUI and workflow example</a></li> 
+          <li class="nav-item nav-item-2"><a href="../index.html" >Postprocessing</a> » </li>
+          <li class="nav-item nav-item-3"><a href="../pyvista_objects.html" >Graphics</a> » </li>
+          <li class="nav-item nav-item-4"><a href="ansys.fluent.post.pyvista.pyvista_objects.Mesh.html" accesskey="U">ansys.fluent.post.pyvista.pyvista_objects.Mesh</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">update</a></li> 
       </ul>
     </div>
         </div>
@@ -190,18 +191,18 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../index.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/index.html">
    Core
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../launcher.html">
+    <a class="reference internal" href="../../core/launcher.html">
      Launching Fluent
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -211,29 +212,24 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../_autosummary/ansys.fluent.core.launcher.launcher.launch_fluent.html">
+      <a class="reference internal" href="../../core/_autosummary/ansys.fluent.core.launcher.launcher.launch_fluent.html">
        launch_fluent
       </a>
      </li>
     </ul>
    </li>
-   <li class="toctree-l2 current active has-children">
-    <a class="reference internal" href="index.html">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../core/meshing/index.html">
      Meshing
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
     <label for="toctree-checkbox-3">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="current">
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
-       Meshing TUI and workflow example
-      </a>
-     </li>
+    <ul>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="tui.html">
+      <a class="reference internal" href="../../core/meshing/tui.html">
        Meshing (TUI)
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
@@ -243,102 +239,102 @@
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="_autosummary/ansys.fluent.core.meshing.tui.beta_feature_access.html">
+        <a class="reference internal" href="../../core/meshing/_autosummary/ansys.fluent.core.meshing.tui.beta_feature_access.html">
          beta_feature_access
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="_autosummary/ansys.fluent.core.meshing.tui.close_fluent.html">
+        <a class="reference internal" href="../../core/meshing/_autosummary/ansys.fluent.core.meshing.tui.close_fluent.html">
          close_fluent
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="_autosummary/ansys.fluent.core.meshing.tui.exit.html">
+        <a class="reference internal" href="../../core/meshing/_autosummary/ansys.fluent.core.meshing.tui.exit.html">
          exit
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="_autosummary/ansys.fluent.core.meshing.tui.switch_to_solution_mode.html">
+        <a class="reference internal" href="../../core/meshing/_autosummary/ansys.fluent.core.meshing.tui.switch_to_solution_mode.html">
          switch_to_solution_mode
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="_autosummary/ansys.fluent.core.meshing.tui.print_license_usage.html">
+        <a class="reference internal" href="../../core/meshing/_autosummary/ansys.fluent.core.meshing.tui.print_license_usage.html">
          print_license_usage
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="_autosummary/ansys.fluent.core.meshing.tui.file.html">
+        <a class="reference internal" href="../../core/meshing/_autosummary/ansys.fluent.core.meshing.tui.file.html">
          ansys.fluent.core.meshing.tui.file
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="_autosummary/ansys.fluent.core.meshing.tui.boundary.html">
+        <a class="reference internal" href="../../core/meshing/_autosummary/ansys.fluent.core.meshing.tui.boundary.html">
          ansys.fluent.core.meshing.tui.boundary
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="_autosummary/ansys.fluent.core.meshing.tui.cad_assemblies.html">
+        <a class="reference internal" href="../../core/meshing/_autosummary/ansys.fluent.core.meshing.tui.cad_assemblies.html">
          ansys.fluent.core.meshing.tui.cad_assemblies
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="_autosummary/ansys.fluent.core.meshing.tui.preferences.html">
+        <a class="reference internal" href="../../core/meshing/_autosummary/ansys.fluent.core.meshing.tui.preferences.html">
          ansys.fluent.core.meshing.tui.preferences
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="_autosummary/ansys.fluent.core.meshing.tui.size_functions.html">
+        <a class="reference internal" href="../../core/meshing/_autosummary/ansys.fluent.core.meshing.tui.size_functions.html">
          ansys.fluent.core.meshing.tui.size_functions
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="_autosummary/ansys.fluent.core.meshing.tui.scoped_sizing.html">
+        <a class="reference internal" href="../../core/meshing/_autosummary/ansys.fluent.core.meshing.tui.scoped_sizing.html">
          ansys.fluent.core.meshing.tui.scoped_sizing
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="_autosummary/ansys.fluent.core.meshing.tui.objects.html">
+        <a class="reference internal" href="../../core/meshing/_autosummary/ansys.fluent.core.meshing.tui.objects.html">
          ansys.fluent.core.meshing.tui.objects
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="_autosummary/ansys.fluent.core.meshing.tui.diagnostics.html">
+        <a class="reference internal" href="../../core/meshing/_autosummary/ansys.fluent.core.meshing.tui.diagnostics.html">
          ansys.fluent.core.meshing.tui.diagnostics
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="_autosummary/ansys.fluent.core.meshing.tui.material_point.html">
+        <a class="reference internal" href="../../core/meshing/_autosummary/ansys.fluent.core.meshing.tui.material_point.html">
          ansys.fluent.core.meshing.tui.material_point
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="_autosummary/ansys.fluent.core.meshing.tui.mesh.html">
+        <a class="reference internal" href="../../core/meshing/_autosummary/ansys.fluent.core.meshing.tui.mesh.html">
          ansys.fluent.core.meshing.tui.mesh
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="_autosummary/ansys.fluent.core.meshing.tui.display.html">
+        <a class="reference internal" href="../../core/meshing/_autosummary/ansys.fluent.core.meshing.tui.display.html">
          ansys.fluent.core.meshing.tui.display
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="_autosummary/ansys.fluent.core.meshing.tui.report.html">
+        <a class="reference internal" href="../../core/meshing/_autosummary/ansys.fluent.core.meshing.tui.report.html">
          ansys.fluent.core.meshing.tui.report
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="_autosummary/ansys.fluent.core.meshing.tui.parallel.html">
+        <a class="reference internal" href="../../core/meshing/_autosummary/ansys.fluent.core.meshing.tui.parallel.html">
          ansys.fluent.core.meshing.tui.parallel
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="_autosummary/ansys.fluent.core.meshing.tui.openmp_controls.html">
+        <a class="reference internal" href="../../core/meshing/_autosummary/ansys.fluent.core.meshing.tui.openmp_controls.html">
          ansys.fluent.core.meshing.tui.openmp_controls
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="_autosummary/ansys.fluent.core.meshing.tui.reference_frames.html">
+        <a class="reference internal" href="../../core/meshing/_autosummary/ansys.fluent.core.meshing.tui.reference_frames.html">
          ansys.fluent.core.meshing.tui.reference_frames
         </a>
        </li>
@@ -347,7 +343,7 @@
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../solver/index.html">
+    <a class="reference internal" href="../../core/solver/index.html">
      Solver
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
@@ -357,12 +353,12 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../solver/settings.html">
-       Settings Objects
+      <a class="reference internal" href="../../core/solver/settings.html">
+       Settings Objects (Beta)
       </a>
      </li>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../solver/tui.html">
+      <a class="reference internal" href="../../core/solver/tui.html">
        Solver TUI
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
@@ -372,107 +368,107 @@
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.adjoint.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.adjoint.html">
          ansys.fluent.core.solver.tui.adjoint
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.display.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.display.html">
          ansys.fluent.core.solver.tui.display
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.define.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.define.html">
          ansys.fluent.core.solver.tui.define
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.file.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.file.html">
          ansys.fluent.core.solver.tui.file
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.icing.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.icing.html">
          ansys.fluent.core.solver.tui.icing
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.mesh.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.mesh.html">
          ansys.fluent.core.solver.tui.mesh
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.parameters__and__customization.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.parameters__and__customization.html">
          ansys.fluent.core.solver.tui.parameters__and__customization
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.parallel.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.parallel.html">
          ansys.fluent.core.solver.tui.parallel
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.plot.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.plot.html">
          ansys.fluent.core.solver.tui.plot
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.preferences.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.preferences.html">
          ansys.fluent.core.solver.tui.preferences
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.report.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.report.html">
          ansys.fluent.core.solver.tui.report
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.results.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.results.html">
          ansys.fluent.core.solver.tui.results
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.solution.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.solution.html">
          ansys.fluent.core.solver.tui.solution
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.solve.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.solve.html">
          ansys.fluent.core.solver.tui.solve
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.setup.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.setup.html">
          ansys.fluent.core.solver.tui.setup
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.surface.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.surface.html">
          ansys.fluent.core.solver.tui.surface
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.server.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.server.html">
          ansys.fluent.core.solver.tui.server
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.turbo_post.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.turbo_post.html">
          ansys.fluent.core.solver.tui.turbo_post
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.views.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.views.html">
          ansys.fluent.core.solver.tui.views
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.parametric_study.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.parametric_study.html">
          ansys.fluent.core.solver.tui.parametric_study
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../solver/_autosummary/ansys.fluent.core.solver.tui.turbo_workflow.html">
+        <a class="reference internal" href="../../core/solver/_autosummary/ansys.fluent.core.solver.tui.turbo_workflow.html">
          ansys.fluent.core.solver.tui.turbo_workflow
         </a>
        </li>
@@ -643,61 +639,61 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../post/index.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
    Postprocessing
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../post/graphics.html">
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="../pyvista_objects.html">
      Graphics
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
     <label for="toctree-checkbox-11">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul>
+    <ul class="current">
      <li class="toctree-l3">
-      <a class="reference internal" href="../../post/_autosummary/ansys.fluent.post.pyvista.graphics.Graphics.html">
-       ansys.fluent.post.pyvista.graphics.Graphics
+      <a class="reference internal" href="ansys.fluent.post.pyvista.pyvista_objects.Graphics.html">
+       ansys.fluent.post.pyvista.pyvista_objects.Graphics
       </a>
      </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../../post/_autosummary/ansys.fluent.post.pyvista.graphics.Mesh.html">
-       ansys.fluent.post.pyvista.graphics.Mesh
+     <li class="toctree-l3 current active has-children">
+      <a class="reference internal" href="ansys.fluent.post.pyvista.pyvista_objects.Mesh.html">
+       ansys.fluent.post.pyvista.pyvista_objects.Mesh
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+      <input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
       <label for="toctree-checkbox-12">
        <i class="fas fa-chevron-down">
        </i>
       </label>
-      <ul>
+      <ul class="current">
        <li class="toctree-l4">
-        <a class="reference internal" href="../../post/_autosummary/ansys.fluent.post.pyvista.graphics.Mesh.display.html">
+        <a class="reference internal" href="ansys.fluent.post.pyvista.pyvista_objects.Mesh.display.html">
          display
         </a>
        </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../../post/_autosummary/ansys.fluent.post.pyvista.graphics.Mesh.update.html">
+       <li class="toctree-l4 current active">
+        <a class="current reference internal" href="#">
          update
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../../post/_autosummary/ansys.fluent.post.pyvista.graphics.Mesh.parent.html">
+        <a class="reference internal" href="ansys.fluent.post.pyvista.pyvista_objects.Mesh.parent.html">
          parent
         </a>
        </li>
       </ul>
      </li>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../../post/_autosummary/ansys.fluent.post.pyvista.graphics.Surface.html">
-       ansys.fluent.post.pyvista.graphics.Surface
+      <a class="reference internal" href="ansys.fluent.post.pyvista.pyvista_objects.Surface.html">
+       ansys.fluent.post.pyvista.pyvista_objects.Surface
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
       <label for="toctree-checkbox-13">
@@ -706,25 +702,25 @@
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="../../post/_autosummary/ansys.fluent.post.pyvista.graphics.Surface.display.html">
+        <a class="reference internal" href="ansys.fluent.post.pyvista.pyvista_objects.Surface.display.html">
          display
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../../post/_autosummary/ansys.fluent.post.pyvista.graphics.Surface.update.html">
+        <a class="reference internal" href="ansys.fluent.post.pyvista.pyvista_objects.Surface.update.html">
          update
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../../post/_autosummary/ansys.fluent.post.pyvista.graphics.Surface.parent.html">
+        <a class="reference internal" href="ansys.fluent.post.pyvista.pyvista_objects.Surface.parent.html">
          parent
         </a>
        </li>
       </ul>
      </li>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../../post/_autosummary/ansys.fluent.post.pyvista.graphics.Contour.html">
-       ansys.fluent.post.pyvista.graphics.Contour
+      <a class="reference internal" href="ansys.fluent.post.pyvista.pyvista_objects.Contour.html">
+       ansys.fluent.post.pyvista.pyvista_objects.Contour
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
       <label for="toctree-checkbox-14">
@@ -733,17 +729,17 @@
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="../../post/_autosummary/ansys.fluent.post.pyvista.graphics.Contour.display.html">
+        <a class="reference internal" href="ansys.fluent.post.pyvista.pyvista_objects.Contour.display.html">
          display
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../../post/_autosummary/ansys.fluent.post.pyvista.graphics.Contour.update.html">
+        <a class="reference internal" href="ansys.fluent.post.pyvista.pyvista_objects.Contour.update.html">
          update
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../../post/_autosummary/ansys.fluent.post.pyvista.graphics.Contour.parent.html">
+        <a class="reference internal" href="ansys.fluent.post.pyvista.pyvista_objects.Contour.parent.html">
          parent
         </a>
        </li>
@@ -789,26 +785,14 @@
               
               <div>
                 
-  <section id="meshing-tui-and-workflow-example">
-<h1>Meshing TUI and workflow example<a class="headerlink" href="#meshing-tui-and-workflow-example" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansys.fluent.core</span> <span class="k">as</span> <span class="nn">pyfluent</span>
-<span class="n">session</span> <span class="o">=</span> <span class="n">pyfluent</span><span class="o">.</span><span class="n">launch_fluent</span><span class="p">(</span><span class="n">meshing_mode</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">session</span><span class="o">.</span><span class="n">start_transcript</span><span class="p">()</span>
-<span class="n">session</span><span class="o">.</span><span class="n">workflow</span><span class="o">.</span><span class="n">InitializeWorkflow</span><span class="p">(</span><span class="n">WorkflowType</span><span class="o">=</span><span class="s1">&#39;Watertight Geometry&#39;</span><span class="p">)</span>
-<span class="n">session</span><span class="o">.</span><span class="n">workflow</span><span class="o">.</span><span class="n">TaskObject</span><span class="p">[</span><span class="s1">&#39;Import Geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">Arguments</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="s1">&#39;cylinder.agdb&#39;</span><span class="p">)</span>
-<span class="n">session</span><span class="o">.</span><span class="n">workflow</span><span class="o">.</span><span class="n">TaskObject</span><span class="p">[</span><span class="s1">&#39;Import Geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">Execute</span><span class="p">()</span>
-<span class="n">session</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">meshing</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">check_mesh</span><span class="p">()</span>
-<span class="n">exit</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansys.fluent.core</span> <span class="k">as</span> <span class="nn">pyfluent</span>
-<span class="n">session</span> <span class="o">=</span> <span class="n">pyfluent</span><span class="o">.</span><span class="n">launch_fluent</span><span class="p">(</span><span class="n">meshing_mode</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">session</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">meshing</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">read_case</span><span class="p">(</span><span class="s2">&quot;elbow.cas.gz&quot;</span><span class="p">)</span>
-<span class="n">session</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">meshing</span><span class="o">.</span><span class="n">switch_to_solution_mode</span><span class="p">(</span><span class="s2">&quot;yes&quot;</span><span class="p">)</span>
-<span class="n">session</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">define</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">unsteady_2nd_order</span><span class="p">(</span><span class="s2">&quot;yes&quot;</span><span class="p">)</span>
-<span class="n">exit</span><span class="p">()</span>
-</pre></div>
-</div>
+  <section id="update">
+<h1>update<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h1>
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.fluent.post.pyvista.pyvista_objects.Mesh.update">
+<span class="sig-prename descclassname"><span class="pre">Mesh.</span></span><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.fluent.post.pyvista.pyvista_objects.Mesh.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update method.</p>
+</dd></dl>
+
 </section>
 
 

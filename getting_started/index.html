@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Introduction &#8212; PyFluent</title>
+    <title>Getting Started &#8212; PyFluent</title>
     
     
   <link href="../_static/css/theme.css" rel="stylesheet">
@@ -47,7 +47,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="User’s Guide" href="../users_guide/index.html" />
@@ -99,7 +99,7 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 current active nav-item">
  <a class="current reference internal nav-link" href="#">
-  Introduction
+  Getting Started
  </a>
 </li>
 
@@ -167,7 +167,7 @@
         <li class="nav-item nav-item-0"><a href="../index.html">PyFluent</a> » </li>
     
 
-        <li class="nav-item nav-item-this"><a href="">Introduction</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Getting Started</a></li> 
       </ul>
     </div>
         </div>
@@ -205,27 +205,15 @@
 
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Introduction
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#installation">
    Installation
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#starting-fluent">
    Starting Fluent
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#advanced-features">
-     Advanced Features
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -248,33 +236,22 @@
               
               <div>
                 
-  <section id="introduction">
-<span id="getting-started"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>Python is a portable, dynamically typed, interpreted programming language that is easy to learn,
-read, and write. It is free to use and distribute and is supported by a vast support library of
-thousands of available packages.</p>
-<p>PyFluent is part of a growing Ansys Python environment that
-lets you use Ansys Fluent within or alongside any other Python environment, whether it
-is in conjunction with other Ansys Python libraries and packages or with other external
-Python products.</p>
-<p>PyFluent launches or connects with a running Fluent process as a server using gRPC interfaces,
-but all you need to interact with is the Python interface of Ansys Fluent.</p>
-<p>You can use PyFluent to programmatically create, interact with and control an Ansys Fluent session to
-create your own customized workspace. In addition, you can use PyFluent to enhance your
-productivity with highly configurable, customized scripts.</p>
-</section>
-<section id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<p>To use PyFluent, you need to have a local installation of Ansys.
-The version of Ansys installed will dictate the interface and features
-available to you.</p>
+  <section id="getting-started">
+<span id="id1"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<p>To use PyFluent, you need to have a local installation of Ansys.</p>
 <p>Visit <a class="reference external" href="https://www.ansys.com/">Ansys</a> for more information on
 getting a licensed copy of Ansys.</p>
-<p>To install a local version of PyFluent, you need to clone the PyFluent repository through
-GitHub Enterprise (<a class="reference external" href="https://github.com/pyansys/pyfluent">https://github.com/pyansys/pyfluent</a>). Other Ansys Python
-packages are also available here or through www.pypi.org.</p>
-<p>Once you have access to a cloned repository,
-you can install the pyfluent library by using</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>To use PyFluent, you need to have a local installation of Ansys. The version of
+Ansys installed will dictate the interface and features available to you.</p>
+<p>Visit <a class="reference external" href="https://www.ansys.com/">Ansys</a> for more information on getting a
+licensed copy of Ansys.</p>
+<p>To install a local version of PyFluent, you need to clone the PyFluent
+repository through GitHub Enterprise (<a class="reference external" href="https://github.com/pyansys/pyfluent">https://github.com/pyansys/pyfluent</a>).
+Other Ansys Python packages are also available here or through www.pypi.org.</p>
+<p>Once you have access to a cloned repository, you can install the pyfluent
+library by using</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pyansys</span><span class="o">/</span><span class="n">pyfluent</span><span class="o">.</span><span class="n">git</span>
 <span class="n">cd</span> <span class="n">pyfluent</span>
 <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>
@@ -282,9 +259,9 @@ you can install the pyfluent library by using</p>
 </div>
 </section>
 <section id="starting-fluent">
-<h1>Starting Fluent<a class="headerlink" href="#starting-fluent" title="Permalink to this headline">¶</a></h1>
-<p>To see and interact with the Fluent graphical user interface,
-set the following environment variable:</p>
+<h2>Starting Fluent<a class="headerlink" href="#starting-fluent" title="Permalink to this headline">¶</a></h2>
+<p>To see and interact with the Fluent graphical user interface, set the following
+environment variable:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PYFLUENT_SHOW_SERVER_GUI</span><span class="o">=</span><span class="mi">1</span>
 </pre></div>
 </div>
@@ -296,14 +273,11 @@ set the following environment variable:</p>
 <span class="go">DNW: What comes out here?</span>
 </pre></div>
 </div>
-<p>Fluent is now active and you can send commands to it as a genuine
-Python class.  For example, if we wanted to … &lt;add a basic example&gt;:</p>
+<p>Fluent is now active and you can send commands to it as a genuine Python class.
+For example, if we wanted to … &lt;add a basic example&gt;:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nb">type</span> <span class="n">some</span> <span class="n">commands</span> <span class="n">here</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<section id="advanced-features">
-<h2>Advanced Features<a class="headerlink" href="#advanced-features" title="Permalink to this headline">¶</a></h2>
-<p>Maybe give some basic example here for each API.</p>
 </section>
 </section>
 
