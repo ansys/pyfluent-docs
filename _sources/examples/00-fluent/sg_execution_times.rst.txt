@@ -5,10 +5,10 @@
 
 Computation times
 =================
-**07:00.919** total execution time for **examples_00-fluent** files:
+**06:34.111** total execution time for **examples_00-fluent** files:
 
 +----------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_examples_00-fluent_mixing_elbow_settings_api.py` (``mixing_elbow_settings_api.py``) | 03:46.264 | 0.0 MB |
+| :ref:`sphx_glr_examples_00-fluent_mixing_elbow_settings_api.py` (``mixing_elbow_settings_api.py``) | 03:28.537 | 0.0 MB |
 +----------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_examples_00-fluent_mixing_elbow_tui_api.py` (``mixing_elbow_tui_api.py``)           | 03:14.655 | 0.0 MB |
+| :ref:`sphx_glr_examples_00-fluent_mixing_elbow_tui_api.py` (``mixing_elbow_tui_api.py``)           | 03:05.574 | 0.0 MB |
 +----------------------------------------------------------------------------------------------------+-----------+--------+
