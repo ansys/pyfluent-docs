@@ -1,0 +1,6 @@
+﻿flobject
+========
+
+.. currentmodule:: ansys.fluent.core.solver
+
+.. automodule:: flobject
