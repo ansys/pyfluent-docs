@@ -52,13 +52,12 @@ the elbow. The pipe dimensions are in inches and the fluid properties and
 boundary conditions are given in SI units. The Reynolds number for the flow at
 the larger inlet is 50, 800, so a turbulent flow model will be required.
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-41
+.. GENERATED FROM PYTHON SOURCE LINES 38-40
 
 First, download the geometry file and start Fluent as a service with
 Meshing Mode, Double Precision, Number of Processors 2
-Importing the graphics module - pyvista
 
-.. GENERATED FROM PYTHON SOURCE LINES 41-55
+.. GENERATED FROM PYTHON SOURCE LINES 40-54
 
 .. code-block:: default
 
@@ -73,7 +72,7 @@ Importing the graphics module - pyvista
     import_filename = examples.download_file("mixing_elbow.pmdb", "pyfluent/mixing_elbow")
 
     session = pyfluent.launch_fluent(
-        meshing_mode=True, precision="double", processor_count=2
+        meshing_mode=True, precision="double", processor_count=4
     )
 
 
@@ -83,11 +82,11 @@ Importing the graphics module - pyvista
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 56-57
+.. GENERATED FROM PYTHON SOURCE LINES 55-56
 
 Select the Watertight Geometry Meshing Workflow
 
-.. GENERATED FROM PYTHON SOURCE LINES 57-60
+.. GENERATED FROM PYTHON SOURCE LINES 56-59
 
 .. code-block:: default
 
@@ -109,12 +108,12 @@ Select the Watertight Geometry Meshing Workflow
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 61-63
+.. GENERATED FROM PYTHON SOURCE LINES 60-62
 
 Import the CAD geometry. For Length Units, select "in".
 Execute the Import Geometry task.
 
-.. GENERATED FROM PYTHON SOURCE LINES 63-70
+.. GENERATED FROM PYTHON SOURCE LINES 62-69
 
 .. code-block:: default
 
@@ -140,16 +139,15 @@ Execute the Import Geometry task.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 71-77
+.. GENERATED FROM PYTHON SOURCE LINES 70-75
 
 Add local sizing:
 In the Add Local Sizing task, you are prompted as to whether or not you would
-like to add local sizing controls to the faceted geometry. For the purposes
-of this example, you can keep the default setting. Execute to complete this
-task
+like to add local sizing controls to the faceted geometry. For the purposes of
+this example, you can keep the default setting. Execute to complete this task
 and proceed to the next task in the workflow.
 
-.. GENERATED FROM PYTHON SOURCE LINES 77-80
+.. GENERATED FROM PYTHON SOURCE LINES 75-78
 
 .. code-block:: default
 
@@ -167,11 +165,11 @@ and proceed to the next task in the workflow.
  .. code-block:: none
 
 
-    False
+    True
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 81-86
+.. GENERATED FROM PYTHON SOURCE LINES 79-84
 
 Generate the surface mesh:
 In the Generate the Surface Mesh task, you can set various properties of the
@@ -179,7 +177,7 @@ surface mesh for the faceted geometry. Specify 0.3 for Maximum Size. Execute
 the Surface Mesh to complete this task and proceed to the next task in the
 workflow.
 
-.. GENERATED FROM PYTHON SOURCE LINES 86-91
+.. GENERATED FROM PYTHON SOURCE LINES 84-89
 
 .. code-block:: default
 
@@ -203,17 +201,16 @@ workflow.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 92-99
+.. GENERATED FROM PYTHON SOURCE LINES 90-96
 
 Describe the geometry:
 When you select the Describe Geometry task, you are prompted with questions
 relating to the nature of the imported geometry. Since the geometry defined
 the fluid region. Select The geometry consists of only fluid regions with no
 voids for Geometry Type. Execute Describe Geometry to complete this task and
-proceed
-to the next task in the workflow.
+proceed to the next task in the workflow.
 
-.. GENERATED FROM PYTHON SOURCE LINES 99-108
+.. GENERATED FROM PYTHON SOURCE LINES 96-105
 
 .. code-block:: default
 
@@ -241,14 +238,14 @@ to the next task in the workflow.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 109-113
+.. GENERATED FROM PYTHON SOURCE LINES 106-110
 
 Update Boundaries Task:
 For the wall-inlet boundary, change the Boundary Type field to wall. Execute
 Update Boundaries to complete this task and proceed to the next task in the
 workflow.
 
-.. GENERATED FROM PYTHON SOURCE LINES 113-121
+.. GENERATED FROM PYTHON SOURCE LINES 110-118
 
 .. code-block:: default
 
@@ -275,14 +272,14 @@ workflow.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 122-126
+.. GENERATED FROM PYTHON SOURCE LINES 119-123
 
 Update your regions:
 Select the Update Regions task, where you can review the names and types of
 the various regions that have been generated from your imported geometry, and
 change them as needed. Keep the default settings, and execute Update Regions.
 
-.. GENERATED FROM PYTHON SOURCE LINES 126-128
+.. GENERATED FROM PYTHON SOURCE LINES 123-125
 
 .. code-block:: default
 
@@ -303,13 +300,13 @@ change them as needed. Keep the default settings, and execute Update Regions.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 129-132
+.. GENERATED FROM PYTHON SOURCE LINES 126-129
 
 Add Boundary Layers:
 Select the Add Boundary Layers task, where you can set properties of the
 boundary layer mesh. Keep the default settings, and Add Boundary Layers.
 
-.. GENERATED FROM PYTHON SOURCE LINES 132-141
+.. GENERATED FROM PYTHON SOURCE LINES 129-138
 
 .. code-block:: default
 
@@ -337,14 +334,14 @@ boundary layer mesh. Keep the default settings, and Add Boundary Layers.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 142-146
+.. GENERATED FROM PYTHON SOURCE LINES 139-143
 
 Generate the volume mesh:
 Select the Generate the Volume Mesh task, where you can set properties of the
 volume mesh. Select the poly-hexcore for Fill With. Execute Generate the
 Volume Mesh.
 
-.. GENERATED FROM PYTHON SOURCE LINES 146-154
+.. GENERATED FROM PYTHON SOURCE LINES 143-151
 
 .. code-block:: default
 
@@ -371,11 +368,11 @@ Volume Mesh.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 155-156
+.. GENERATED FROM PYTHON SOURCE LINES 152-153
 
 Check the mesh in Meshing mode
 
-.. GENERATED FROM PYTHON SOURCE LINES 156-158
+.. GENERATED FROM PYTHON SOURCE LINES 153-155
 
 .. code-block:: default
 
@@ -388,12 +385,12 @@ Check the mesh in Meshing mode
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 159-161
+.. GENERATED FROM PYTHON SOURCE LINES 156-158
 
 Save the mesh file (mixing_elbow.msh.h5)
 session.tui.meshing.file.write_mesh('mixing_elbow.msh.h5')
 
-.. GENERATED FROM PYTHON SOURCE LINES 163-168
+.. GENERATED FROM PYTHON SOURCE LINES 160-165
 
 Switch to Solution mode:
 Now that a high-quality mesh has been generated using Ansys Fluent in meshing
@@ -401,7 +398,7 @@ mode, you can now switch to solver mode to complete the setup of the
 simulation. We have just checked the mesh, so select Yes to switch to
 solution mode.
 
-.. GENERATED FROM PYTHON SOURCE LINES 168-170
+.. GENERATED FROM PYTHON SOURCE LINES 165-167
 
 .. code-block:: default
 
@@ -414,7 +411,7 @@ solution mode.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 171-177
+.. GENERATED FROM PYTHON SOURCE LINES 168-174
 
 Check the mesh in Solver mode:
 The mesh check will list the minimum and maximum x, y, and z values from the
@@ -423,7 +420,7 @@ mesh features that are checked. Any errors in the mesh will be reported at
 this time. Ensure that the minimum volume is not negative, since Ansys Fluent
 cannot begin a calculation when this is the case.
 
-.. GENERATED FROM PYTHON SOURCE LINES 177-179
+.. GENERATED FROM PYTHON SOURCE LINES 174-176
 
 .. code-block:: default
 
@@ -436,7 +433,7 @@ cannot begin a calculation when this is the case.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 180-186
+.. GENERATED FROM PYTHON SOURCE LINES 177-183
 
 Set the working units for the mesh:
 select "in" to set inches as the working unit for length. Note:  Because the
@@ -445,7 +442,7 @@ to change any other units in this problem. If you want a different working
 unit for length, other than inches (for example, millimeters), make the
 appropriate change.
 
-.. GENERATED FROM PYTHON SOURCE LINES 186-188
+.. GENERATED FROM PYTHON SOURCE LINES 183-185
 
 .. code-block:: default
 
@@ -458,11 +455,11 @@ appropriate change.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 189-190
+.. GENERATED FROM PYTHON SOURCE LINES 186-187
 
 Enable heat transfer by activating the energy equation.
 
-.. GENERATED FROM PYTHON SOURCE LINES 190-192
+.. GENERATED FROM PYTHON SOURCE LINES 187-189
 
 .. code-block:: default
 
@@ -475,11 +472,11 @@ Enable heat transfer by activating the energy equation.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 193-194
+.. GENERATED FROM PYTHON SOURCE LINES 190-191
 
 Create a new material called water-liquid.
 
-.. GENERATED FROM PYTHON SOURCE LINES 194-196
+.. GENERATED FROM PYTHON SOURCE LINES 191-193
 
 .. code-block:: default
 
@@ -492,12 +489,12 @@ Create a new material called water-liquid.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 197-199
+.. GENERATED FROM PYTHON SOURCE LINES 194-196
 
 Set up the cell zone conditions for the fluid zone (elbow-fluid). Select
 water-liquid from the Material list.
 
-.. GENERATED FROM PYTHON SOURCE LINES 199-225
+.. GENERATED FROM PYTHON SOURCE LINES 196-222
 
 .. code-block:: default
 
@@ -534,12 +531,12 @@ water-liquid from the Material list.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 226-228
+.. GENERATED FROM PYTHON SOURCE LINES 223-225
 
 Set up the boundary conditions for the inlets, outlet, and walls for your CFD
 analysis.
 
-.. GENERATED FROM PYTHON SOURCE LINES 228-248
+.. GENERATED FROM PYTHON SOURCE LINES 225-245
 
 .. code-block:: default
 
@@ -570,12 +567,12 @@ analysis.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 249-251
+.. GENERATED FROM PYTHON SOURCE LINES 246-248
 
 hot inlet (hot-inlet), Setting: Value:
 Velocity Specification Method: Magnitude, Normal to Boundary
 
-.. GENERATED FROM PYTHON SOURCE LINES 251-269
+.. GENERATED FROM PYTHON SOURCE LINES 248-266
 
 .. code-block:: default
 
@@ -604,13 +601,13 @@ Velocity Specification Method: Magnitude, Normal to Boundary
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 270-273
+.. GENERATED FROM PYTHON SOURCE LINES 267-270
 
 pressure outlet (outlet), Setting: Value:
 Backflow Turbulent Intensity: 5 [%]
 Backflow Turbulent Viscosity Ratio: 4
 
-.. GENERATED FROM PYTHON SOURCE LINES 273-281
+.. GENERATED FROM PYTHON SOURCE LINES 270-278
 
 .. code-block:: default
 
@@ -629,11 +626,11 @@ Backflow Turbulent Viscosity Ratio: 4
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 282-283
+.. GENERATED FROM PYTHON SOURCE LINES 279-280
 
 Enable the plotting of residuals during the calculation.
 
-.. GENERATED FROM PYTHON SOURCE LINES 283-285
+.. GENERATED FROM PYTHON SOURCE LINES 280-282
 
 .. code-block:: default
 
@@ -646,12 +643,12 @@ Enable the plotting of residuals during the calculation.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 286-288
+.. GENERATED FROM PYTHON SOURCE LINES 283-285
 
 Create a surface report definition of average temperature at the outlet
 (outlet) called "outlet-temp-avg
 
-.. GENERATED FROM PYTHON SOURCE LINES 288-299
+.. GENERATED FROM PYTHON SOURCE LINES 285-296
 
 .. code-block:: default
 
@@ -673,7 +670,7 @@ Create a surface report definition of average temperature at the outlet
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 300-305
+.. GENERATED FROM PYTHON SOURCE LINES 297-302
 
 Create a convergence condition for outlet-temp-avg:
 Provide con-outlet-temp-avg for Conditions. Select outlet-temp-avg Report
@@ -681,7 +678,7 @@ Definition. Provide 1e-5 for Stop Criterion. Provide 20 for Ignore Iterations
 Before. Provide 15 for Use Iterations. Enable Print. Set Every Iteration to
 3.
 
-.. GENERATED FROM PYTHON SOURCE LINES 305-338
+.. GENERATED FROM PYTHON SOURCE LINES 302-335
 
 .. code-block:: default
 
@@ -725,11 +722,11 @@ Before. Provide 15 for Use Iterations. Enable Print. Set Every Iteration to
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 339-340
+.. GENERATED FROM PYTHON SOURCE LINES 336-337
 
 Initialize the flow field using the Hybrid Initialization
 
-.. GENERATED FROM PYTHON SOURCE LINES 340-342
+.. GENERATED FROM PYTHON SOURCE LINES 337-339
 
 .. code-block:: default
 
@@ -742,16 +739,16 @@ Initialize the flow field using the Hybrid Initialization
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 343-345
+.. GENERATED FROM PYTHON SOURCE LINES 340-342
 
 Save the case file (mixing_elbow1.cas.h5).
 session.tui.solver.file.write_case('mixing_elbow1.cas.h5')
 
-.. GENERATED FROM PYTHON SOURCE LINES 347-348
+.. GENERATED FROM PYTHON SOURCE LINES 344-345
 
 Solve for 100 Iterations.
 
-.. GENERATED FROM PYTHON SOURCE LINES 348-350
+.. GENERATED FROM PYTHON SOURCE LINES 345-347
 
 .. code-block:: default
 
@@ -764,27 +761,47 @@ Solve for 100 Iterations.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 351-356
+.. GENERATED FROM PYTHON SOURCE LINES 348-350
 
 Examine the mass flux report for convergence: Select cold-inlet, hot-inlet,
 and outlet from the Boundaries selection list.
-session.tui.solver.report.fluxes.mass_flow(
-   "no", "cold-inlet", "hot-inlet", "outlet", "()", "yes", "mass-flux1.flp"
-)
 
-.. GENERATED FROM PYTHON SOURCE LINES 358-360
+.. GENERATED FROM PYTHON SOURCE LINES 350-362
+
+.. code-block:: default
+
+
+    # session.tui.solver.report.fluxes.mass_flow(
+    #     "no",
+    #     "cold-inlet",
+    #     "hot-inlet",
+    #     "outlet",
+    #     "()",
+    #     "yes",
+    #     "mass-flux1.flp",
+    # )
+
+
+
+
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 363-365
 
 Save the data file (mixing_elbow1.dat.h5).
 session.tui.solver.file.write_data('mixing_elbow1.dat.h5')
 
-.. GENERATED FROM PYTHON SOURCE LINES 362-366
+.. GENERATED FROM PYTHON SOURCE LINES 367-371
 
 Create and display a definition for velocity magnitude contours on the
 symmetry plane:
 Provide contour-vel for Contour Name. Select velocity magnitude. Select
 symmetry-xyplane from the Surfaces list. Display contour-vel contour.
 
-.. GENERATED FROM PYTHON SOURCE LINES 366-386
+.. GENERATED FROM PYTHON SOURCE LINES 371-391
 
 .. code-block:: default
 
@@ -815,14 +832,14 @@ symmetry-xyplane from the Surfaces list. Display contour-vel contour.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 387-391
+.. GENERATED FROM PYTHON SOURCE LINES 392-396
 
 Create and display a definition for temperature contours on the symmetry
 plane:
 Provide contour-temp for Contour Name. Select temperature. Select
 symmetry-xyplane from the Surfaces list. Display contour-temp contour.
 
-.. GENERATED FROM PYTHON SOURCE LINES 391-410
+.. GENERATED FROM PYTHON SOURCE LINES 396-415
 
 .. code-block:: default
 
@@ -852,11 +869,11 @@ symmetry-xyplane from the Surfaces list. Display contour-temp contour.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 411-412
+.. GENERATED FROM PYTHON SOURCE LINES 416-417
 
 Create and display velocity vectors on the symmetry-xyplane plane:
 
-.. GENERATED FROM PYTHON SOURCE LINES 412-434
+.. GENERATED FROM PYTHON SOURCE LINES 417-439
 
 .. code-block:: default
 
@@ -889,12 +906,12 @@ Create and display velocity vectors on the symmetry-xyplane plane:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 435-437
+.. GENERATED FROM PYTHON SOURCE LINES 440-442
 
 Create an iso-surface representing the intersection of the plane z=0 and the
 surface outlet. Name: z=0_outlet
 
-.. GENERATED FROM PYTHON SOURCE LINES 437-441
+.. GENERATED FROM PYTHON SOURCE LINES 442-446
 
 .. code-block:: default
 
@@ -909,12 +926,12 @@ surface outlet. Name: z=0_outlet
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 442-444
+.. GENERATED FROM PYTHON SOURCE LINES 447-449
 
 Display and save an XY plot of the temperature profile across the centerline
 of the outlet for the initial solution
 
-.. GENERATED FROM PYTHON SOURCE LINES 444-470
+.. GENERATED FROM PYTHON SOURCE LINES 449-476
 
 .. code-block:: default
 
@@ -930,19 +947,20 @@ of the outlet for the initial solution
     )
     # session.tui.solver.display.objects.display("xy-outlet-temp")
     # session.tui.solver.plot.plot(
-    #    "yes",
-    #    "temp-1.xy",
-    #    "no",
-    #    "no",
-    #    "no",
-    #    "temperature",
-    #    "yes",
-    #    "1",
-    #    "0",
-    #    "0",
-    #    "z=0_outlet",
-    #    "()",
+    #     "yes",
+    #     "temp-1.xy",
+    #     "no",
+    #     "no",
+    #     "no",
+    #     "temperature",
+    #     "yes",
+    #     "1",
+    #     "0",
+    #     "0",
+    #     "z=0_outlet",
+    #     "()",
     # )
+    #
 
 
 
@@ -951,11 +969,11 @@ of the outlet for the initial solution
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 471-472
+.. GENERATED FROM PYTHON SOURCE LINES 477-478
 
 Mesh display using PyVista
 
-.. GENERATED FROM PYTHON SOURCE LINES 472-487
+.. GENERATED FROM PYTHON SOURCE LINES 478-493
 
 .. code-block:: default
 
@@ -986,11 +1004,11 @@ Mesh display using PyVista
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 488-489
+.. GENERATED FROM PYTHON SOURCE LINES 494-495
 
 Temperature Contour display using PyVista
 
-.. GENERATED FROM PYTHON SOURCE LINES 489-497
+.. GENERATED FROM PYTHON SOURCE LINES 495-503
 
 .. code-block:: default
 
@@ -1009,11 +1027,11 @@ Temperature Contour display using PyVista
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 498-499
+.. GENERATED FROM PYTHON SOURCE LINES 504-505
 
 Velocity Magnitude Contour display using PyVista
 
-.. GENERATED FROM PYTHON SOURCE LINES 499-507
+.. GENERATED FROM PYTHON SOURCE LINES 505-513
 
 .. code-block:: default
 
@@ -1021,7 +1039,7 @@ Velocity Magnitude Contour display using PyVista
     # contour_2 = graphics_session.Contours["contour_2"]
     # contour_2.field = "velocity-magnitude"
     # contour_2.surfaces_list = [
-    #    "symmetry-xyplane"
+    #     "symmetry-xyplane"
     # ]
     # contour_2.display()
 
@@ -1032,7 +1050,7 @@ Velocity Magnitude Contour display using PyVista
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 508-510
+.. GENERATED FROM PYTHON SOURCE LINES 514-516
 
 Write final case and data.
 session.tui.solver.file.write_case_data("mixing_elbow2_tui.cas.h5")
@@ -1040,7 +1058,7 @@ session.tui.solver.file.write_case_data("mixing_elbow2_tui.cas.h5")
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  53.923 seconds)
+   **Total running time of the script:** ( 1 minutes  4.070 seconds)
 
 
 .. _sphx_glr_download_examples_00-fluent_mixing_elbow.py:

@@ -50,7 +50,7 @@ import_filename = examples.download_file(
 # Start Fluent in double precision running on 2 processors
 
 session = pyfluent.launch_fluent(
-    meshing_mode=True, precision="double", processor_count=2
+    meshing_mode=True, precision="double", processor_count=4
 )
 
 ###############################################################################
@@ -82,7 +82,7 @@ session.workflow.TaskObject["Import CAD and Part Management"].Arguments.setState
     {
         "Context": 0,
         "CreateObjectPer": "Custom",
-        "FMDFileName": "import_filenamed",
+        "FMDFileName": import_filename,
         "FileLoaded": "yes",
         "ObjectSetting": "DefaultObjectSetting",
         "Options": {

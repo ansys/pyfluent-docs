@@ -315,7 +315,7 @@ to demonstrate the automatic leakage detection aspects of the meshing workflow.<
 </div>
 <p>Start Fluent in double precision running on 2 processors</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span> <span class="o">=</span> <span class="n">pyfluent</span><span class="o">.</span><span class="n">launch_fluent</span><span class="p">(</span>
-    <span class="n">meshing_mode</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="s2">&quot;double&quot;</span><span class="p">,</span> <span class="n">processor_count</span><span class="o">=</span><span class="mi">2</span>
+    <span class="n">meshing_mode</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="s2">&quot;double&quot;</span><span class="p">,</span> <span class="n">processor_count</span><span class="o">=</span><span class="mi">4</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -349,7 +349,7 @@ management.</p>
     <span class="p">{</span>
         <span class="s2">&quot;Context&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;CreateObjectPer&quot;</span><span class="p">:</span> <span class="s2">&quot;Custom&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;FMDFileName&quot;</span><span class="p">:</span> <span class="s2">&quot;import_filenamed&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;FMDFileName&quot;</span><span class="p">:</span> <a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">import_filename</span></a><span class="p">,</span>
         <span class="s2">&quot;FileLoaded&quot;</span><span class="p">:</span> <span class="s2">&quot;yes&quot;</span><span class="p">,</span>
         <span class="s2">&quot;ObjectSetting&quot;</span><span class="p">:</span> <span class="s2">&quot;DefaultObjectSetting&quot;</span><span class="p">,</span>
         <span class="s2">&quot;Options&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -910,7 +910,7 @@ session.tui.solver.file.write_case_data(“exhaust_system.cas.h5”)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># session.exit()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 3 minutes  36.599 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  52.928 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-fluent-exhaust-system-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/c1cc34af98766a17c3ec444694803a65/exhaust_system.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">exhaust_system.py</span></code></a></p>

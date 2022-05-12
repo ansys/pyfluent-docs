@@ -37,7 +37,6 @@ the larger inlet is 50, 800, so a turbulent flow model will be required.
 ###############################################################################
 # First, download the geometry file and start Fluent as a service with
 # Meshing Mode, Double Precision, Number of Processors 2
-# Importing the graphics module - pyvista
 
 import ansys.fluent.core as pyfluent
 from ansys.fluent.core import examples
@@ -49,7 +48,7 @@ set_config(blocking=True)
 import_filename = examples.download_file("mixing_elbow.pmdb", "pyfluent/mixing_elbow")
 
 session = pyfluent.launch_fluent(
-    meshing_mode=True, precision="double", processor_count=2
+    meshing_mode=True, precision="double", processor_count=4
 )
 
 ###############################################################################
@@ -70,9 +69,8 @@ session.workflow.TaskObject["Import Geometry"].Execute()
 ###############################################################################
 # Add local sizing:
 # In the Add Local Sizing task, you are prompted as to whether or not you would
-# like to add local sizing controls to the faceted geometry. For the purposes
-# of this example, you can keep the default setting. Execute to complete this
-# task
+# like to add local sizing controls to the faceted geometry. For the purposes of
+# this example, you can keep the default setting. Execute to complete this task
 # and proceed to the next task in the workflow.
 session.workflow.TaskObject["Add Local Sizing"].AddChildToTask()
 session.workflow.TaskObject["Add Local Sizing"].Execute()
@@ -94,8 +92,7 @@ session.workflow.TaskObject["Generate the Surface Mesh"].Execute()
 # relating to the nature of the imported geometry. Since the geometry defined
 # the fluid region. Select The geometry consists of only fluid regions with no
 # voids for Geometry Type. Execute Describe Geometry to complete this task and
-# proceed
-# to the next task in the workflow.
+# proceed to the next task in the workflow.
 session.workflow.TaskObject["Describe Geometry"].UpdateChildTasks(
     SetupTypeChanged=False
 )
@@ -350,9 +347,17 @@ session.tui.solver.solve.iterate(100)
 ###############################################################################
 # Examine the mass flux report for convergence: Select cold-inlet, hot-inlet,
 # and outlet from the Boundaries selection list.
+
 # session.tui.solver.report.fluxes.mass_flow(
-#    "no", "cold-inlet", "hot-inlet", "outlet", "()", "yes", "mass-flux1.flp"
+#     "no",
+#     "cold-inlet",
+#     "hot-inlet",
+#     "outlet",
+#     "()",
+#     "yes",
+#     "mass-flux1.flp",
 # )
+
 
 ###############################################################################
 # Save the data file (mixing_elbow1.dat.h5).
@@ -453,19 +458,20 @@ session.tui.solver.display.objects.create(
 )
 # session.tui.solver.display.objects.display("xy-outlet-temp")
 # session.tui.solver.plot.plot(
-#    "yes",
-#    "temp-1.xy",
-#    "no",
-#    "no",
-#    "no",
-#    "temperature",
-#    "yes",
-#    "1",
-#    "0",
-#    "0",
-#    "z=0_outlet",
-#    "()",
+#     "yes",
+#     "temp-1.xy",
+#     "no",
+#     "no",
+#     "no",
+#     "temperature",
+#     "yes",
+#     "1",
+#     "0",
+#     "0",
+#     "z=0_outlet",
+#     "()",
 # )
+#
 
 ###############################################################################
 # Mesh display using PyVista
@@ -500,7 +506,7 @@ mesh_1.display()
 # contour_2 = graphics_session.Contours["contour_2"]
 # contour_2.field = "velocity-magnitude"
 # contour_2.surfaces_list = [
-#    "symmetry-xyplane"
+#     "symmetry-xyplane"
 # ]
 # contour_2.display()
 

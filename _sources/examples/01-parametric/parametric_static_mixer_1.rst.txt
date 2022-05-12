@@ -62,7 +62,7 @@ Launch Fluent in 3D and double precision
 .. code-block:: default
 
 
-    session = pyfluent.launch_fluent(precision="double", processor_count=2)
+    session = pyfluent.launch_fluent(precision="double", processor_count=4)
 
 
 
@@ -527,7 +527,7 @@ Save parametric project
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 2 minutes  41.458 seconds)
+   **Total running time of the script:** ( 2 minutes  30.756 seconds)
 
 
 .. _sphx_glr_download_examples_01-parametric_parametric_static_mixer_1.py:
