@@ -3,7 +3,7 @@
 ===============
 Getting Started
 ===============
-To run PyFluent, you must have a local licenced copy of Ansys Fluent. 
+To run PyFluent, you must have a local licensed copy of Ansys Fluent. 
 PyFluent supports Ansys Fluent versions 2022 R2 or newer.
 
 Visit `Ansys <https://www.ansys.com/>`_ for more information on
@@ -40,6 +40,14 @@ For a local "development" version, install with:
    git clone https://github.com/pyansys/pyfluent.git
    cd pyfluent
    pip install -e .
+
+(Remove this section when PyFluent project goes public) 
+Until PyFluent project goes public, install the latest release from
+the artifactory.
+
+.. code::
+
+   python -m pip install --extra-index-url http://conanreader:conanreader@canartifactory.ansys.com:8080/artifactory/api/pypi/pypi/simple --trusted-host canartifactory.ansys.com ansys-fluent-core
 
 This will allow you to install the PyFluent ``ansys-fluent-core`` module
 and modify it locally and have the changes reflected in your setup
