@@ -1,6 +1,0 @@
-refresh
-=======
-
-.. currentmodule:: ansys.fluent.core.solver.monitors_manager
-
-.. automethod:: MonitorsManager.refresh

@@ -1,6 +1,0 @@
-register\_callback
-==================
-
-.. currentmodule:: ansys.fluent.core.solver.events_manager
-
-.. automethod:: EventsManager.register_callback
