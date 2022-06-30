@@ -1,0 +1,6 @@
+stop
+====
+
+.. currentmodule:: ansys.fluent.core.solver.events_manager
+
+.. automethod:: EventsManager.stop

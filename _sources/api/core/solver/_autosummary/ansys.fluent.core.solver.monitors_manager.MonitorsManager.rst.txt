@@ -1,0 +1,37 @@
+﻿ansys.fluent.core.solver.monitors\_manager.MonitorsManager
+==========================================================
+
+.. currentmodule:: ansys.fluent.core.solver.monitors_manager
+
+.. autoclass:: MonitorsManager
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      MonitorsManager.get_monitor_set_data
+      
+      
+      MonitorsManager.get_monitor_set_names
+      
+      
+      MonitorsManager.get_monitor_set_plot
+      
+      
+      MonitorsManager.get_monitor_set_prop
+      
+      
+      MonitorsManager.refresh
+      
+   
+   
+
+   
+   
+   

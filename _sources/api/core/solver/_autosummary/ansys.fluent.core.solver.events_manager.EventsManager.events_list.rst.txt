@@ -1,0 +1,6 @@
+events\_list
+============
+
+.. currentmodule:: ansys.fluent.core.solver.events_manager
+
+.. autoproperty:: EventsManager.events_list

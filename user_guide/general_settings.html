@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Applying Solution Settings &#8212; PyFluent</title>
+    <title>Applying General Settings &#8212; PyFluent</title>
     
     
   <!-- Loaded before other Sphinx assets -->
@@ -49,8 +49,8 @@
     <link rel="shortcut icon" href="../_static/ansys-favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="API Reference" href="../api/index.html" />
-    <link rel="prev" title="Defining Boundary Conditions" href="boundary_conditions.html" />
+    <link rel="next" title="Specifying Solver Settings" href="solver_settings.html" />
+    <link rel="prev" title="Using the Meshing Workflows" href="meshing_workflows.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -167,7 +167,7 @@
     
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User Guide</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">Applying Solution Settings</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Applying General Settings</a></li> 
       </ul>
     </div>
         </div>
@@ -194,12 +194,17 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="tui_api.html">
+   Using the TUI APIs
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="meshing_workflows.html">
    Using the Meshing Workflows
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="general_settings.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Applying General Settings
   </a>
  </li>
@@ -210,7 +215,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="models.html">
-   Defining Your Models
+   Defining Models
   </a>
  </li>
  <li class="toctree-l1">
@@ -223,8 +228,8 @@
    Defining Boundary Conditions
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution.html">
    Applying Solution Settings
   </a>
  </li>
@@ -256,11 +261,6 @@
    Text User Interface (TUI) API
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#settings-module-beta">
-   Settings Module (Beta)
-  </a>
- </li>
 </ul>
 
 </nav>
@@ -282,28 +282,15 @@
               
               <div>
                 
-  <section id="applying-solution-settings">
-<h1>Applying Solution Settings<a class="headerlink" href="#applying-solution-settings" title="Permalink to this headline">#</a></h1>
-<p>PyFluent supports applying solution settings using the TUI API and the
-Settings API (Beta).</p>
-<p>PyFluent allows you to initialize and solve using the traditional
-Text User Interface (TUI) command-based infrastructure and the settings
-module (Beta).</p>
+  <section id="applying-general-settings">
+<h1>Applying General Settings<a class="headerlink" href="#applying-general-settings" title="Permalink to this headline">#</a></h1>
+<p>PyFluent supports defining general settings using the TUI API and
+<a class="reference internal" href="../api/core/solver/settings.html#ref-settings"><span class="std std-ref">Settings Objects</span></a>.</p>
 <section id="text-user-interface-tui-api">
 <h2>Text User Interface (TUI) API<a class="headerlink" href="#text-user-interface-tui-api" title="Permalink to this headline">#</a></h2>
-<p>The following example demonstrates how you can apply solution settings
-using the TUI API:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">solve</span><span class="o">.</span><span class="n">initialize</span><span class="o">.</span><span class="n">hyb_initialization</span><span class="p">()</span>
-<span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">solve</span><span class="o">.</span><span class="n">iterate</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="settings-module-beta">
-<h2>Settings Module (Beta)<a class="headerlink" href="#settings-module-beta" title="Permalink to this headline">#</a></h2>
-<p>The following example demonstrates how you can apply solution settings
-using the settings module (Beta):</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">solution</span><span class="o">.</span><span class="n">initialization</span><span class="o">.</span><span class="n">hybrid_initialize</span><span class="p">()</span>
-<span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">solution</span><span class="o">.</span><span class="n">run_calculation</span><span class="o">.</span><span class="n">iterate</span><span class="p">(</span><span class="n">number_of_iterations</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+<p>The following example demonstrates how you can define units using
+the TUI API:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">define</span><span class="o">.</span><span class="n">units</span><span class="p">(</span><span class="s2">&quot;length&quot;</span><span class="p">,</span> <span class="s2">&quot;in&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
