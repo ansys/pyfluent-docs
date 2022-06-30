@@ -1,0 +1,6 @@
+get\_monitor\_set\_plot
+=======================
+
+.. currentmodule:: ansys.fluent.core.solver.monitors_manager
+
+.. automethod:: MonitorsManager.get_monitor_set_plot

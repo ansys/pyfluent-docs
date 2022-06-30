@@ -1,0 +1,6 @@
+unregister\_callback
+====================
+
+.. currentmodule:: ansys.fluent.core.solver.events_manager
+
+.. automethod:: EventsManager.unregister_callback
