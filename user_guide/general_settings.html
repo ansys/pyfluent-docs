@@ -260,28 +260,6 @@
   <a class="reference internal nav-link" href="#text-user-interface-tui-api">
    Text User Interface (TUI) API
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#checking-mesh">
-     Checking Mesh
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reporting-mesh-quality">
-     Reporting Mesh Quality
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#scaling-mesh">
-     Scaling Mesh
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#defining-units">
-     Defining Units
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -306,37 +284,15 @@
                 
   <section id="applying-general-settings">
 <h1>Applying General Settings<a class="headerlink" href="#applying-general-settings" title="Permalink to this headline">#</a></h1>
+<p>PyFluent supports defining general settings using the TUI API and
+<a class="reference internal" href="../api/core/solver/settings.html#ref-settings"><span class="std std-ref">Settings Objects</span></a>.</p>
 <section id="text-user-interface-tui-api">
 <h2>Text User Interface (TUI) API<a class="headerlink" href="#text-user-interface-tui-api" title="Permalink to this headline">#</a></h2>
-<p>The following examples demonstrate how you can use solver meshing commands
-and setup units using the TUI API:</p>
-<section id="checking-mesh">
-<h3>Checking Mesh<a class="headerlink" href="#checking-mesh" title="Permalink to this headline">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansys.fluent.core</span> <span class="k">as</span> <span class="nn">pyfluent</span>
-<span class="n">session</span> <span class="o">=</span> <span class="n">pyfluent</span><span class="o">.</span><span class="n">launch_fluent</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="s2">&quot;double&quot;</span><span class="p">,</span> <span class="n">processor_count</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">read_case</span><span class="p">(</span><span class="n">case_file_name</span><span class="o">=</span><span class="s1">&#39;file.cas.h5&#39;</span><span class="p">)</span>
-<span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">check</span><span class="p">()</span>
-</pre></div>
-</div>
-</section>
-<section id="reporting-mesh-quality">
-<h3>Reporting Mesh Quality<a class="headerlink" href="#reporting-mesh-quality" title="Permalink to this headline">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">quality</span><span class="p">()</span>
-</pre></div>
-</div>
-</section>
-<section id="scaling-mesh">
-<h3>Scaling Mesh<a class="headerlink" href="#scaling-mesh" title="Permalink to this headline">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="defining-units">
-<h3>Defining Units<a class="headerlink" href="#defining-units" title="Permalink to this headline">#</a></h3>
+<p>The following example demonstrates how you can define units using
+the TUI API:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">define</span><span class="o">.</span><span class="n">units</span><span class="p">(</span><span class="s2">&quot;length&quot;</span><span class="p">,</span> <span class="s2">&quot;in&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
 </section>
 </section>
 

@@ -260,23 +260,6 @@
   <a class="reference internal nav-link" href="#text-user-interface-tui-api">
    Text User Interface (TUI) API
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#selecting-steady-or-transient">
-     Selecting Steady or Transient
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#selecting-pressure-based-or-density-based-solver">
-     Selecting Pressure Based or Density Based Solver
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#defining-gravitational-acceleration">
-     Defining Gravitational Acceleration
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -301,34 +284,15 @@
                 
   <section id="specifying-solver-settings">
 <span id="ref-user-guide-solver-settings"></span><h1>Specifying Solver Settings<a class="headerlink" href="#specifying-solver-settings" title="Permalink to this headline">#</a></h1>
+<p>PyFluent supports specifying solver settings using the TUI API and
+<a class="reference internal" href="../api/core/solver/settings.html#ref-settings"><span class="std std-ref">Settings Objects</span></a>.</p>
 <section id="text-user-interface-tui-api">
 <h2>Text User Interface (TUI) API<a class="headerlink" href="#text-user-interface-tui-api" title="Permalink to this headline">#</a></h2>
-<p>The following example demonstrates how you can define some solver
+<p>The following example demonstrates how you can specify solver
 settings using the TUI API:</p>
-<section id="selecting-steady-or-transient">
-<h3>Selecting Steady or Transient<a class="headerlink" href="#selecting-steady-or-transient" title="Permalink to this headline">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansys.fluent.core</span> <span class="k">as</span> <span class="nn">pyfluent</span>
-<span class="n">session</span> <span class="o">=</span> <span class="n">pyfluent</span><span class="o">.</span><span class="n">launch_fluent</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="s2">&quot;double&quot;</span><span class="p">,</span> <span class="n">processor_count</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">read_case</span><span class="p">(</span><span class="n">case_file_name</span><span class="o">=</span><span class="s1">&#39;file.cas.h5&#39;</span><span class="p">)</span>
-<span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">define</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">steady</span><span class="p">(</span><span class="s1">&#39;yes&#39;</span><span class="p">)</span>
-<span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">define</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">unsteady_1st_order</span><span class="p">(</span><span class="s1">&#39;yes&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">define</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">unsteady_2nd_order</span><span class="p">(</span><span class="s1">&#39;yes’)​</span>
 </pre></div>
 </div>
-</section>
-<section id="selecting-pressure-based-or-density-based-solver">
-<h3>Selecting Pressure Based or Density Based Solver<a class="headerlink" href="#selecting-pressure-based-or-density-based-solver" title="Permalink to this headline">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">define</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">density_based_explicit</span><span class="p">(</span><span class="s1">&#39;yes&#39;</span><span class="p">)</span>
-<span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">define</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">density_based_implicit</span><span class="p">(</span><span class="s1">&#39;yes&#39;</span><span class="p">)</span>
-<span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">define</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">pressure_based</span><span class="p">(</span><span class="s1">&#39;yes&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="defining-gravitational-acceleration">
-<h3>Defining Gravitational Acceleration<a class="headerlink" href="#defining-gravitational-acceleration" title="Permalink to this headline">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">define</span><span class="o">.</span><span class="n">operating_conditions</span><span class="o">.</span><span class="n">gravity</span><span class="p">(</span><span class="s1">&#39;yes&#39;</span><span class="p">,</span><span class="s1">&#39;0&#39;</span><span class="p">,</span><span class="s1">&#39;-9.81&#39;</span><span class="p">,</span><span class="s1">&#39;0&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
 </section>
 </section>
 
