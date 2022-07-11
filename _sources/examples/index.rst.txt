@@ -26,12 +26,12 @@ On this page you will find a number of examples for the PyFluent
 
 .. _sphx_glr_examples_00-fluent:
 
-Complete Workflow Examples
-==========================
+Complete Simulation Examples
+============================
 The following examples demonstrate how to use Fluent capabilities from Python
-for a complete Fluent simulation workflow.  This includes This includes geometry
-import, Fluent's meshing workflows, setting up and running the solver and
-reviews the results using Fluent's post processing capabilities.
+for a complete Fluent simulation.  This includes geometry import, Fluent's
+meshing workflows, setting up and running the solver and reviewing the results
+using Fluent's post processing capabilities.
 
 
 .. raw:: html
