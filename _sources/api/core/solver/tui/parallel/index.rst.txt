@@ -14,10 +14,8 @@ solver.tui.parallel
 .. toctree::
    :hidden:
 
-   network/index
    partition/index
    set/index
    load_balance/index
    gpgpu/index
    timer/index
-   multidomain/index

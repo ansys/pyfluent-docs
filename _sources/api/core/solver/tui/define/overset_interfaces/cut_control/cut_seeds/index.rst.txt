@@ -9,5 +9,5 @@ solver.tui.define.overset\_interfaces.cut\_control.cut\_seeds
    :toctree: _autosummary
 
 .. autoclass:: ansys.fluent.core.solver.tui::main_menu.define.overset_interfaces.cut_control.cut_seeds
-   :members: add, delete, delete_all, list, cut_seeds_for_all_component_zones
+   :members: cut_seeds_for_all_component_zones
 
