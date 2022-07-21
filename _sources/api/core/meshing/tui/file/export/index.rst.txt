@@ -9,5 +9,5 @@ meshing.tui.file.export
    :toctree: _autosummary
 
 .. autoclass:: ansys.fluent.core.meshing.tui::main_menu.file.export
-   :members: stl
+   :members: ansys, hypermesh, nastran, patran, stl
 

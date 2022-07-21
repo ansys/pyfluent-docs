@@ -9,7 +9,7 @@ meshing.tui.display.set.windows
    :toctree: _autosummary
 
 .. autoclass:: ansys.fluent.core.meshing.tui::main_menu.display.set.windows
-   :members: aspect_ratio, logo, ruler
+   :members: aspect_ratio, logo, ruler, logo_color
 
 .. toctree::
    :hidden:

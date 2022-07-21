@@ -9,5 +9,5 @@ solver.tui.report.volume\_integrals
    :toctree: _autosummary
 
 .. autoclass:: ansys.fluent.core.solver.tui::main_menu.report.volume_integrals
-   :members: mass, mass_avg, mass_integral, maximum, minimum, sum, volume, volume_avg, volume_integral
+   :members: mass, mass_avg, mass_integral, maximum, minimum, sum, twopisum, volume, volume_avg, volume_integral
 

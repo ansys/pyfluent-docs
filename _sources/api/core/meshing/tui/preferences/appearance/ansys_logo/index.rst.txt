@@ -9,5 +9,5 @@ meshing.tui.preferences.appearance.ansys\_logo
    :toctree: _autosummary
 
 .. autoclass:: ansys.fluent.core.meshing.tui::main_menu.preferences.appearance.ansys_logo
-   :members: visible
+   :members: color, visible
 

@@ -9,5 +9,5 @@ solver.tui.mesh.surface\_mesh
    :toctree: _autosummary
 
 .. autoclass:: ansys.fluent.core.solver.tui::main_menu.mesh.surface_mesh
-   :members: delete, display
+   :members: delete, display, read
 

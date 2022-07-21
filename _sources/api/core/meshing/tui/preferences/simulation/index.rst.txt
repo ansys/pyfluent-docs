@@ -9,7 +9,7 @@ meshing.tui.preferences.simulation
    :toctree: _autosummary
 
 .. autoclass:: ansys.fluent.core.meshing.tui::main_menu.preferences.simulation
-   :members: local_residual_scaling
+   :members: flow_model, local_residual_scaling
 
 .. toctree::
    :hidden:

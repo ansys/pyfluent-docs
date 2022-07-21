@@ -9,5 +9,5 @@ solver.tui.parallel.set
    :toctree: _autosummary
 
 .. autoclass:: ansys.fluent.core.solver.tui::main_menu.parallel.set
-   :members: verbosity, fast_i
+   :members: partition_mask, verbosity, time_out, fast_i
 

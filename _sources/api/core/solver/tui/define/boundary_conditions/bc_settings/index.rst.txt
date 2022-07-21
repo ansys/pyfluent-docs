@@ -11,3 +11,7 @@ solver.tui.define.boundary\_conditions.bc\_settings
 .. autoclass:: ansys.fluent.core.solver.tui::main_menu.define.boundary_conditions.bc_settings
    :members: mass_flow, pressure_outlet
 
+.. toctree::
+   :hidden:
+
+   pressure_far_field/index

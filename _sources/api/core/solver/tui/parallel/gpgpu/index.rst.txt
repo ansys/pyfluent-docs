@@ -9,5 +9,5 @@ solver.tui.parallel.gpgpu
    :toctree: _autosummary
 
 .. autoclass:: ansys.fluent.core.solver.tui::main_menu.parallel.gpgpu
-   :members: show
+   :members: show, select
 
