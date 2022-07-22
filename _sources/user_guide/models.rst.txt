@@ -1,14 +1,14 @@
-Defining models
+Defining Models
 ===============
 PyFluent supports defining models using :ref:`ref_solver_tui_commands` and :ref:`ref_settings`.
 
-Using solver TUI commands
--------------------------
-The following examples show how you define models using :ref:`ref_solver_tui_commands`.
+Solver TUI Commands
+-------------------
+The following examples demonstrate how you can define models using :ref:`ref_solver_tui_commands`:
 
-Enabling the energy model
-~~~~~~~~~~~~~~~~~~~~~~~~~
-The ``define.models.energy`` TUI enables and disables the energy model.
+Enabling Energy Model
+~~~~~~~~~~~~~~~~~~~~~
+define/models/energy TUI: Enables/disables the energy model.
 
 .. code:: python
 
@@ -17,13 +17,13 @@ The ``define.models.energy`` TUI enables and disables the energy model.
     session.solver.tui.file.read_case(case_file_name='file.cas.h5')
     session.solver.tui.define.models.energy('yes', 'no', 'no', 'no', 'yes')
 
-Enabling the viscous model
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-The ``define.models.viscous.laminar`` TUI enables and disables the laminar flow model.
+Enabling Viscous Model
+~~~~~~~~~~~~~~~~~~~~~~
+define/models/viscous/laminar TUI: Enables/disables laminar flow model.
 
-The ``define.models.viscous.kw_sst`` TUI enables and disables the SST-kw turbulence model.
+define/models/viscous/kw-sst TUI: Enables/disables the SST-kw turbulence model.
 
-The ``define.models.viscous.ke_standard`` TUI enables and ddisables the standard-ke
+define/models/viscous/ke-standard TUI: Enables/disables the standard-ke
 turbulence model.
 
 .. code:: python
@@ -32,18 +32,19 @@ turbulence model.
     session.solver.tui.define.models.viscous.kw_sst('yes')
     session.solver.tui.define.models.viscous.ke_standard('yes')
 
-Enabling the radiation model
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The ``define.models.radiation`` TUI provides options for selecting different radiation models.
+Enabling Radiation Model
+~~~~~~~~~~~~~~~~~~~~~~~~
+define/models/radiation TUI: Provide options to select different radiation models.
 
 .. code:: python
 
     session.solver.tui.define.models.radiation.s2s('yes')
     session.solver.tui.define.models.radiation.p1('yes')
 
-Enabling the multiphase model
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The ``define.models.multiphase`` TUI provides options for selecting different multiphase models.
+Enabling Multiphase Model
+~~~~~~~~~~~~~~~~~~~~~~~~~
+define/models/multiphase TUI: Provide options to select different multiphase models.
+
 
 .. code:: python
 
@@ -52,19 +53,19 @@ The ``define.models.multiphase`` TUI provides options for selecting different mu
     session.solver.tui.define.models.multiphase.model('mixture')
     session.solver.tui.define.models.multiphase.model('wetsteam')
 
-Uing Settings objects
----------------------
-The following examples show how you define models using :ref:`ref_settings`.
+Settings Objects
+----------------
+The following examples demonstrate how you can define models using :ref:`ref_settings`:
 
-Enabling the energy model
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Enabling Energy Model
+~~~~~~~~~~~~~~~~~~~~~
 
 .. code:: python
 
     session.solver.root.setup.models.energy.enabled = True
 
-Enabling the viscous model
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Enabling Viscous Model
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. code:: python
 
