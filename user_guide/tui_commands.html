@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/thebelab-helper.js"></script>
     <script src="../_static/clipboard.min.js"></script>
@@ -56,7 +57,7 @@
     <link rel="next" title="Using meshing workflows" href="meshing_workflows.html" />
     <link rel="prev" title="Launching Fluent locally" href="launching_ansys_fluent.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -101,7 +102,7 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
@@ -229,7 +230,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="materials.html">
-   Defining Materials
+   Defining materials
   </a>
  </li>
  <li class="toctree-l1">
@@ -281,9 +282,9 @@
               <article class="bd-article" role="main">
                 
   <section id="using-tui-commands">
-<span id="ref-user-guide-tui-commands"></span><h1>Using TUI commands<a class="headerlink" href="#using-tui-commands" title="Permalink to this headline">#</a></h1>
+<span id="ref-user-guide-tui-commands"></span><h1>Using TUI commands<a class="headerlink" href="#using-tui-commands" title="Permalink to this heading">#</a></h1>
 <p>TUI commands refer to a programming interface that mirrors the Fluent TUI (text user
-interface). There is a TUI command hierarchy defined for each of the two modes, meshing
+interface). There is a TUI command hierarchy defined for each of the two modes: meshing
 and solution. The hierarchy that is active depends on the current Fluent mode. The guidance
 in this topic applies to both modes.</p>
 <p>The PyFluent TUI commands allow you to automate workflows. Everything
@@ -351,7 +352,7 @@ arguments. With the full TUI call in hand, you can transform it to a Python call
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tui</span><span class="o">.</span><span class="n">define</span><span class="o">.</span><span class="n">units</span><span class="p">(</span><span class="s2">&quot;pressure&quot;</span><span class="p">,</span> <span class="s1">&#39;&quot;Pa&quot;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The string <code class="docutils literal notranslate"><span class="pre">&quot;Pa&quot;</span></code> is wrapped in single quototaton marks to preserve the double quotation marks
+<p>The string <code class="docutils literal notranslate"><span class="pre">&quot;Pa&quot;</span></code> is wrapped in single quotation marks to preserve the double quotation marks
 around the TUI argument.</p>
 <p>Note the following rules that are implied in the preceding examples:</p>
 <ul class="simple">
@@ -401,7 +402,7 @@ single quotation marks.</p></li>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.0.<br>
 </p>
   </div>
   

@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Field Data &#8212; PyFluent</title>
+    <title>Field data &#8212; PyFluent</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -44,6 +44,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
@@ -56,7 +57,7 @@
     <link rel="next" title="EventsManager" href="events.html" />
     <link rel="prev" title="solver.datamodel" href="datamodel/index.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -101,7 +102,7 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
@@ -178,7 +179,7 @@
           <li class="nav-item nav-item-1"><a href="../../index.html" >API reference</a> » </li>
           <li class="nav-item nav-item-2"><a href="../index.html" >Core</a> » </li>
           <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">Solver</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">Field Data</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Field data</a></li> 
       </ul>
     </div>
         </div>
@@ -228,7 +229,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../utils.html">
-     PyFluent Utils Functions
+     PyFluent Util functions
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
     <label for="toctree-checkbox-3">
@@ -8214,7 +8215,7 @@
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       Field Data
+       Field data
       </a>
      </li>
      <li class="toctree-l3">
@@ -8256,8 +8257,8 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#muliple-fields-in-a-request">
-   Muliple fields in a request
+  <a class="reference internal nav-link" href="#multiple-fields-in-a-request">
+   Multiple fields in a request
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -8329,11 +8330,11 @@
               <article class="bd-article" role="main">
                 
   <section id="field-data">
-<span id="ref-field-data"></span><h1>Field Data<a class="headerlink" href="#field-data" title="Permalink to this headline">#</a></h1>
+<span id="ref-field-data"></span><h1>Field data<a class="headerlink" href="#field-data" title="Permalink to this heading">#</a></h1>
 <p>Field data is an attribute of a session and thus an object. With PyFluent, you
 can access Fluent surface, scalar, and vector field data.</p>
-<section id="muliple-fields-in-a-request">
-<h2>Muliple fields in a request<a class="headerlink" href="#muliple-fields-in-a-request" title="Permalink to this headline">#</a></h2>
+<section id="multiple-fields-in-a-request">
+<h2>Multiple fields in a request<a class="headerlink" href="#multiple-fields-in-a-request" title="Permalink to this heading">#</a></h2>
 <p>You can combine requests for multiple fields in a single request and receive
 the data for all fields in a single response.</p>
 <p><strong>Request</strong></p>
@@ -8346,10 +8347,10 @@ the data for all fields in a single response.</p>
 <p><strong>Response</strong>
 The <code class="docutils literal notranslate"><span class="pre">get_fields</span></code> method returns all requested fields in a single response. It provides
 the dictionary containing the requested fields as a numpy array in the following order:</p>
-<p>tag_id [int]-&gt; surface_id [int] -&gt; field_name [str] -&gt; field_data[np.array]</p>
+<p><code class="docutils literal notranslate"><span class="pre">tag_id</span> <span class="pre">[int]-&gt;</span> <span class="pre">surface_id</span> <span class="pre">[int]</span> <span class="pre">-&gt;</span> <span class="pre">field_name</span> <span class="pre">[str]</span> <span class="pre">-&gt;</span> <span class="pre">field_data[np.array]</span></code></p>
 </section>
 <section id="tag-id">
-<h2>Tag ID<a class="headerlink" href="#tag-id" title="Permalink to this headline">#</a></h2>
+<h2>Tag ID<a class="headerlink" href="#tag-id" title="Permalink to this heading">#</a></h2>
 <p>A tag ID is generated by applying <code class="docutils literal notranslate"><span class="pre">`bitwise</span> <span class="pre">or`</span></code> on all tags for a request. Here is a list
 of supported tags and their values:</p>
 <ul class="simple">
@@ -8363,14 +8364,14 @@ dictionary,  <code class="docutils literal notranslate"><span class="pre">tag_id
 node location[4], <code class="docutils literal notranslate"><span class="pre">tag_id</span></code> is <code class="docutils literal notranslate"><span class="pre">(4|8)</span></code>, or 12.</p>
 </section>
 <section id="surface-id">
-<h2>Surface ID<a class="headerlink" href="#surface-id" title="Permalink to this headline">#</a></h2>
+<h2>Surface ID<a class="headerlink" href="#surface-id" title="Permalink to this heading">#</a></h2>
 <p>The surface ID is the same one as passed in the request.</p>
 </section>
 <section id="field-name">
-<h2>Field name<a class="headerlink" href="#field-name" title="Permalink to this headline">#</a></h2>
+<h2>Field name<a class="headerlink" href="#field-name" title="Permalink to this heading">#</a></h2>
 <p>A request returns multiple fields. The number of fields depends on the request type.</p>
 <section id="surface-request">
-<h3>Surface request<a class="headerlink" href="#surface-request" title="Permalink to this headline">#</a></h3>
+<h3>Surface request<a class="headerlink" href="#surface-request" title="Permalink to this heading">#</a></h3>
 <p>The response to a surface request contains any of the following fields, depending on the
 request arguments:</p>
 <ul class="simple">
@@ -8381,12 +8382,12 @@ request arguments:</p>
 </ul>
 </section>
 <section id="scalar-field-request">
-<h3>Scalar field request<a class="headerlink" href="#scalar-field-request" title="Permalink to this headline">#</a></h3>
+<h3>Scalar field request<a class="headerlink" href="#scalar-field-request" title="Permalink to this heading">#</a></h3>
 <p>The response to a scalar field request contains a single field with the same name as the
 scalar field name passed in the request.</p>
 </section>
 <section id="vector-field-request">
-<h3>Vector field request<a class="headerlink" href="#vector-field-request" title="Permalink to this headline">#</a></h3>
+<h3>Vector field request<a class="headerlink" href="#vector-field-request" title="Permalink to this heading">#</a></h3>
 <p>The response to a vector field request contains two fields:</p>
 <ul class="simple">
 <li><p>vector field, with the same name as the vector field name passed in the request</p></li>
@@ -8394,7 +8395,7 @@ scalar field name passed in the request.</p>
 </ul>
 </section>
 <section id="example">
-<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h3>
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Get field data</span>
 <span class="n">field_data</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">field_data</span>
 
@@ -8470,8 +8471,8 @@ scalar field name passed in the request.</p>
 </section>
 </section>
 <section id="one-field-per-request">
-<h2>One field per request<a class="headerlink" href="#one-field-per-request" title="Permalink to this headline">#</a></h2>
-<p>You can receive one field for each request. There is a separeate method for each type of field (surface, scalar,
+<h2>One field per request<a class="headerlink" href="#one-field-per-request" title="Permalink to this heading">#</a></h2>
+<p>You can receive one field for each request. There is a separate method for each type of field (surface, scalar,
 or vector):</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">get_surface_data</span></code> gets surface data.</p></li>
@@ -8480,16 +8481,14 @@ or vector):</p>
 </ul>
 <p>For a surface or scalar field request, the response contains a dictionary of surface IDs and a numpy array of
 the requested field.</p>
-<p>surface_id [int] -&gt; field[np.array]</p>
+<p><code class="docutils literal notranslate"><span class="pre">surface_id</span> <span class="pre">[int]</span> <span class="pre">-&gt;</span> <span class="pre">field[np.array]</span></code></p>
 <p>For a vector field request, the response is a dictionary of surface IDs and a tuple of a numpy array of <code class="docutils literal notranslate"><span class="pre">vector</span> <span class="pre">field</span></code>
 and <code class="docutils literal notranslate"><span class="pre">vector</span> <span class="pre">scale</span></code>.</p>
-<ul class="simple">
-<li><p>surface_id [int] -&gt; (vector field [np.array],  vector-scale [float])</p></li>
-</ul>
+<p><code class="docutils literal notranslate"><span class="pre">surface_id</span> <span class="pre">[int]</span> <span class="pre">-&gt;</span> <span class="pre">(vector</span> <span class="pre">field</span> <span class="pre">[np.array],</span>&#160; <span class="pre">vector-scale</span> <span class="pre">[float])</span></code></p>
 <p>It is important to note that in Fluent, you can associate a surface name with multiple surface
 IDs. Thus, a response can contain a surface ID as a key of the returned dictionary.</p>
 <section id="id1">
-<h3>Example<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<h3>Example<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.fluent.core.services.field_data</span> <span class="kn">import</span> <span class="n">SurfaceDataType</span>
 
 <span class="c1">#Get field data object</span>
@@ -8512,7 +8511,7 @@ IDs. Thus, a response can contain a surface ID as a key of the returned dictiona
 <span class="c1">#return value&gt;&gt; {id1: (np.array, float), id2: (np.array, float)}</span>
 </pre></div>
 </div>
-<table class="longtable table autosummary">
+<table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -8523,7 +8522,7 @@ IDs. Thus, a response can contain a surface ID as a key of the returned dictiona
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.fluent.core.services.field_data.FieldData.add_get_surfaces_request">
 <span class="sig-prename descclassname"><span class="pre">FieldData.</span></span><span class="sig-name descname"><span class="pre">add_get_surfaces_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">surface_ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overset_mesh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provide_vertices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provide_faces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provide_faces_centroid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provide_faces_normal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.fluent.core.services.field_data.FieldData.add_get_surfaces_request" title="Permalink to this definition">#</a></dt>
-<dd><p>Add request to get surface data (vertices, faces connectivity,
+<dd><p>Add request to get surface data (vertices, face connectivity,
 centroids, and normals).</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -8534,9 +8533,9 @@ centroids, and normals).</p>
 </dd>
 <dt><strong>provide_vertices</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Whether to get node coordinates. The default is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 </dd>
-<dt><strong>provide_faces</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Whether to get faces connectivity. The default is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<dt><strong>provide_faces</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Whether to get face connectivity. The default is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 </dd>
-<dt><strong>provide_faces_centroid</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Whether to get faces centroid The default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<dt><strong>provide_faces_centroid</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Whether to get face centroids. The default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </dd>
 <dt><strong>provide_faces_normal</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Whether to get faces normal. The default is <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
@@ -8752,7 +8751,7 @@ When <code class="docutils literal notranslate"><span class="pre">False</span></
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.0.<br>
 </p>
   </div>
   
