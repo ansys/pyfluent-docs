@@ -1,9 +1,5 @@
 :orphan:
 
-
-
-.. _sphx_glr_examples:
-
 .. _ref_example_gallery:
 
 ========
@@ -18,20 +14,27 @@ you can download these examples as Python files or Jupyter notebooks and run the
 
 .. 00-fluent/README.txt
 
+
 .. raw:: html
 
-    <div class="sphx-glr-clear"></div>
+    <div class="sphx-glr-thumbnails">
 
 
+.. raw:: html
 
-.. _sphx_glr_examples_00-fluent:
+    </div>
 
-Complete Simulation Examples
-============================
-These examples show you how use Fluent capabilities from Python to perform
-complete Fluent simulations. This includes geometry import, Fluent's
-meshing workflows, setting up and running the solver, and reviewing the results
-using Fluent's postprocessing capabilities.
+Simulation Examples
+===================
+These examples show you how you can use Fluent capabilities from Python to perform
+Fluent simulations. This includes geometry import, Fluent'smeshing workflows,
+setting up and running the solver, and reviewing the results using Fluent's
+postprocessing capabilities.
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
 
 
 .. raw:: html
@@ -40,20 +43,16 @@ using Fluent's postprocessing capabilities.
 
 .. only:: html
 
- .. figure:: /examples/00-fluent/images/thumb/sphx_glr_exhaust_system_thumb.png
-     :alt: Fault-tolerant meshing workflow
+  .. image:: /examples/00-fluent/images/thumb/sphx_glr_exhaust_system_thumb.png
+    :alt: Fault-tolerant meshing workflow
 
-     :ref:`sphx_glr_examples_00-fluent_exhaust_system.py`
+  :ref:`sphx_glr_examples_00-fluent_exhaust_system.py`
 
 .. raw:: html
 
+      <div class="sphx-glr-thumbnail-title">Fault-tolerant meshing workflow</div>
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /examples/00-fluent/exhaust_system
 
 .. raw:: html
 
@@ -61,20 +60,16 @@ using Fluent's postprocessing capabilities.
 
 .. only:: html
 
- .. figure:: /examples/00-fluent/images/thumb/sphx_glr_mixing_elbow_thumb.png
-     :alt: Watertight geometry meshing workflow
+  .. image:: /examples/00-fluent/images/thumb/sphx_glr_mixing_elbow_thumb.png
+    :alt: Watertight geometry meshing workflow
 
-     :ref:`sphx_glr_examples_00-fluent_mixing_elbow.py`
+  :ref:`sphx_glr_examples_00-fluent_mixing_elbow.py`
 
 .. raw:: html
 
+      <div class="sphx-glr-thumbnail-title">Watertight geometry meshing workflow</div>
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /examples/00-fluent/mixing_elbow
 
 .. raw:: html
 
@@ -82,10 +77,16 @@ using Fluent's postprocessing capabilities.
 
 .. only:: html
 
- .. figure:: /examples/00-fluent/images/thumb/sphx_glr_mixing_elbow_settings_api_thumb.png
-     :alt: Fluent setup and solution using settings objects
+  .. image:: /examples/00-fluent/images/thumb/sphx_glr_mixing_elbow_settings_api_thumb.png
+    :alt: Fluent setup and solution using settings objects
 
-     :ref:`sphx_glr_examples_00-fluent_mixing_elbow_settings_api.py`
+  :ref:`sphx_glr_examples_00-fluent_mixing_elbow_settings_api.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Fluent setup and solution using settings objects</div>
+    </div>
+
 
 .. raw:: html
 
@@ -94,11 +95,9 @@ using Fluent's postprocessing capabilities.
 
 .. toctree::
    :hidden:
+   :includehidden:
 
-   /examples/00-fluent/mixing_elbow_settings_api
-.. raw:: html
-
-    <div class="sphx-glr-clear"></div>
+   /examples/00-fluent/index.rst
 
 
 
